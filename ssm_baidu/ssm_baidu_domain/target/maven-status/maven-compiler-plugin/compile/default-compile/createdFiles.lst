@@ -1,0 +1,4 @@
+com\baidu\domain\Orders.class
+com\baidu\domain\Member.class
+com\baidu\domain\Traveller.class
+com\baidu\domain\Product.class

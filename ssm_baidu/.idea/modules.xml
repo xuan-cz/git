@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ssm_baidu.iml" filepath="$PROJECT_DIR$/ssm_baidu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_baidu_dao/ssm_baidu_dao.iml" filepath="$PROJECT_DIR$/ssm_baidu_dao/ssm_baidu_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_baidu_domain/ssm_baidu_domain.iml" filepath="$PROJECT_DIR$/ssm_baidu_domain/ssm_baidu_domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_baidu_service/ssm_baidu_service.iml" filepath="$PROJECT_DIR$/ssm_baidu_service/ssm_baidu_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_baidu_utils/ssm_baidu_utils.iml" filepath="$PROJECT_DIR$/ssm_baidu_utils/ssm_baidu_utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_baidu_web/ssm_baidu_web.iml" filepath="$PROJECT_DIR$/ssm_baidu_web/ssm_baidu_web.iml" />
+    </modules>
+  </component>
+</project>

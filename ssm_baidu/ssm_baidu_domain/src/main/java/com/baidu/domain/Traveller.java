@@ -1,5 +1,6 @@
 package com.baidu.domain;
 
+import com.baidu.utils.HideStr;
 import lombok.Data;
 
 @Data
@@ -42,5 +43,23 @@ public class Traveller {
             travellerTypeStr = "儿童";
         }
         return travellerTypeStr;
+    }
+
+    /**
+     * 隐藏手机号码
+     * @return
+     */
+    public String getPhoneNum() {
+        phoneNum = HideStr.hidePhoneNum(phoneNum);
+        return phoneNum;
+    }
+
+    /**
+     * 隐藏身份证号码
+     * @return
+     */
+    public String getCredentialsNum() {
+        credentialsNum = HideStr.hideCredentialsNum(credentialsNum);
+        return credentialsNum;
     }
 }

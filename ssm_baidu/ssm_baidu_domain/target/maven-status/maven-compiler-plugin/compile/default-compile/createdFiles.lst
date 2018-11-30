@@ -1,4 +1,7 @@
 com\baidu\domain\Orders.class
+com\baidu\domain\Permission.class
+com\baidu\domain\Role.class
+com\baidu\domain\Users.class
 com\baidu\domain\Member.class
 com\baidu\domain\Traveller.class
 com\baidu\domain\Product.class

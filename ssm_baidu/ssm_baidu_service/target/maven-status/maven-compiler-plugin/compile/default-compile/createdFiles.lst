@@ -1,4 +1,6 @@
 com\baidu\service\IProductService.class
+com\baidu\service\impl\UsersService.class
 com\baidu\service\impl\ProductServiceImpl.class
 com\baidu\service\impl\OrdersServiceImpl.class
+com\baidu\service\IUsersService.class
 com\baidu\service\IOrdersService.class

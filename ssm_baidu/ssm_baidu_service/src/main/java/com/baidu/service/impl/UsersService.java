@@ -21,7 +21,12 @@ public class UsersService implements IUsersService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Users users = usersDao.findByName(username);
+        Users users = null;
+        try {
+            users = usersDao.findByName(username);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         User user = new User(users.getUsername(), "{noop}" + users.getPassword(), users.getStatus() == 0 ? false : true,
                 true, true, true, getAuthority(users.getRoles()));
         return user;
@@ -35,5 +40,32 @@ public class UsersService implements IUsersService {
             list.add(new SimpleGrantedAuthority("ROLE_" + role.getRoleName()));
         }
         return list;
+    }
+
+    @Override
+    public List<Users> findAll() throws Exception {
+        return usersDao.findAll();
+    }
+
+    @Override
+    public Users findById(String id) throws Exception {
+        return usersDao.findById(id);
+    }
+
+    @Override
+    public void save(Users users) throws Exception {
+        usersDao.save(users);
+    }
+
+    @Override
+    public Users findUserByIdAndAllRole(String id) throws Exception {
+        return usersDao.findUserByIdAndAllRole(id);
+    }
+
+    @Override
+    public void addRoleToUser(String userId, String[] ids) throws Exception {
+        for (String roleId : ids) {
+            usersDao.addRoleToUser(userId,roleId);
+        }
     }
 }

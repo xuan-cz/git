@@ -1,2 +1,6 @@
 com\baidu\controller\OrdersController.class
+com\baidu\controller\SysLogController.class
+com\baidu\controller\PermissionController.class
+com\baidu\controller\UserController.class
 com\baidu\controller\ProductController.class
+com\baidu\controller\RoleController.class

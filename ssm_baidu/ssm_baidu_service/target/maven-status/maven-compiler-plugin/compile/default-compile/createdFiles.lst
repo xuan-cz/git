@@ -1,6 +1,12 @@
 com\baidu\service\IProductService.class
+com\baidu\service\IRoleService.class
+com\baidu\service\impl\OrdersServiceImpl.class
+com\baidu\service\IPermissionService.class
+com\baidu\service\ISysLogService.class
+com\baidu\service\IOrdersService.class
+com\baidu\service\impl\PermissionServiceImpl.class
+com\baidu\service\impl\SysLogServiceImpl.class
 com\baidu\service\impl\UsersService.class
 com\baidu\service\impl\ProductServiceImpl.class
-com\baidu\service\impl\OrdersServiceImpl.class
 com\baidu\service\IUsersService.class
-com\baidu\service\IOrdersService.class
+com\baidu\service\impl\RoleServiceImpl.class

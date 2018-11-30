@@ -1,6 +1,12 @@
 F:\develop\ideaProject\git\ssm_baidu\ssm_baidu_service\src\main\java\com\baidu\service\IOrdersService.java
 F:\develop\ideaProject\git\ssm_baidu\ssm_baidu_service\src\main\java\com\baidu\service\IProductService.java
+F:\develop\ideaProject\git\ssm_baidu\ssm_baidu_service\src\main\java\com\baidu\service\IRoleService.java
+F:\develop\ideaProject\git\ssm_baidu\ssm_baidu_service\src\main\java\com\baidu\service\ISysLogService.java
+F:\develop\ideaProject\git\ssm_baidu\ssm_baidu_service\src\main\java\com\baidu\service\impl\PermissionServiceImpl.java
+F:\develop\ideaProject\git\ssm_baidu\ssm_baidu_service\src\main\java\com\baidu\service\IPermissionService.java
 F:\develop\ideaProject\git\ssm_baidu\ssm_baidu_service\src\main\java\com\baidu\service\IUsersService.java
 F:\develop\ideaProject\git\ssm_baidu\ssm_baidu_service\src\main\java\com\baidu\service\impl\UsersService.java
+F:\develop\ideaProject\git\ssm_baidu\ssm_baidu_service\src\main\java\com\baidu\service\impl\RoleServiceImpl.java
+F:\develop\ideaProject\git\ssm_baidu\ssm_baidu_service\src\main\java\com\baidu\service\impl\SysLogServiceImpl.java
 F:\develop\ideaProject\git\ssm_baidu\ssm_baidu_service\src\main\java\com\baidu\service\impl\OrdersServiceImpl.java
 F:\develop\ideaProject\git\ssm_baidu\ssm_baidu_service\src\main\java\com\baidu\service\impl\ProductServiceImpl.java

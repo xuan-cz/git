@@ -5,3 +5,4 @@ com\baidu\domain\Users.class
 com\baidu\domain\Member.class
 com\baidu\domain\Traveller.class
 com\baidu\domain\Product.class
+com\baidu\domain\SysLog.class

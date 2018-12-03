@@ -3,6 +3,7 @@ package com.baidu.controller;
 import com.baidu.domain.Users;
 import com.baidu.service.IUsersService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -17,6 +18,7 @@ public class UserController {
     private IUsersService usersService;
 
     @RequestMapping("/findAll.do")
+    @Secured("ROLE_ADMIN")
     public ModelAndView findAll() throws Exception {
         List<Users> users = usersService.findAll();
         ModelAndView mv = new ModelAndView();
@@ -26,6 +28,7 @@ public class UserController {
     }
 
     @RequestMapping("/findById.do")
+    @Secured("ROLE_ADMIN")
     public ModelAndView findById(String id) throws Exception {
         Users user = usersService.findById(id);
         ModelAndView mv = new ModelAndView();
@@ -35,12 +38,14 @@ public class UserController {
     }
 
     @RequestMapping("/save.do")
+    @Secured("ROLE_ADMIN")
     public String save(Users users) throws Exception {
         usersService.save(users);
         return "redirect:findAll.do";
     }
 
     @RequestMapping("/findUserByIdAndAllRole.do")
+    @Secured("ROLE_ADMIN")
     public ModelAndView findUserByIdAndAllRole(String id)throws Exception {
         Users user = usersService.findUserByIdAndAllRole(id);
         ModelAndView mv = new ModelAndView();
@@ -50,8 +55,8 @@ public class UserController {
     }
 
     @RequestMapping("/addRoleToUser.do")
+    @Secured("ROLE_ADMIN")
     public String addRoleToUser(String userId,String ...ids)throws Exception{
-        System.out.println(userId+"----"+ids.toString());
         usersService.addRoleToUser(userId,ids);
         return "redirect:findAll.do";
     }

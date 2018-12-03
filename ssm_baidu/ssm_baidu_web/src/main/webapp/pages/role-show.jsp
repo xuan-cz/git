@@ -80,7 +80,7 @@
         <section class="content-header">
             <h1>
                 角色管理
-                <small>全部用户</small>
+                <small>全部权限</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="${pageContext.request.contextPath}/index.jsp"><i

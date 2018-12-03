@@ -9,15 +9,21 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
 @Service("userService")
+@Transactional
 public class UsersService implements IUsersService {
 
     @Autowired
     private IUsersDao usersDao;
+    // 注入加密bean
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -27,7 +33,9 @@ public class UsersService implements IUsersService {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        User user = new User(users.getUsername(), "{noop}" + users.getPassword(), users.getStatus() == 0 ? false : true,
+        // 将用户密码解密
+
+        User user = new User(users.getUsername(), users.getPassword(), users.getStatus() == 0 ? false : true,
                 true, true, true, getAuthority(users.getRoles()));
         return user;
     }
@@ -54,6 +62,8 @@ public class UsersService implements IUsersService {
 
     @Override
     public void save(Users users) throws Exception {
+        // 保存用户时，对用户密码进行加密后再调用dao
+        users.setPassword(bCryptPasswordEncoder.encode(users.getPassword()));
         usersDao.save(users);
     }
 

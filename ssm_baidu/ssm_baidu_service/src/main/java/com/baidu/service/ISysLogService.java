@@ -7,4 +7,6 @@ import java.util.List;
 public interface ISysLogService {
 
     List<SysLog> findAll()throws Exception;
+
+    void save(SysLog sysLog) throws Exception;
 }

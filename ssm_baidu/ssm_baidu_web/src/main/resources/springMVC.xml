@@ -2,13 +2,25 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:security="http://www.springframework.org/schema/security"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd
-       http://www.springframework.org/schema/mvc
-       http://www.springframework.org/schema/mvc/spring-mvc.xsd
-       http://www.springframework.org/schema/context
-       http://www.springframework.org/schema/context/spring-context.xsd">
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/mvc
+           http://www.springframework.org/schema/mvc/spring-mvc.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <!--配置spring-security开启使用注解权限拦截-->
+    <security:global-method-security pre-post-annotations="enabled" secured-annotations="enabled"
+                                     jsr250-annotations="enabled"/>
+
 
     <!--开启springmvc注解扫描-->
     <context:component-scan base-package="com.baidu.controller"/>
@@ -20,12 +32,17 @@
     </bean>
 
     <!-- 设置静态资源不过滤 -->
-    <mvc:resources location="/css/" mapping="/css/**" />
-    <mvc:resources location="/img/" mapping="/img/**" />
-    <mvc:resources location="/js/" mapping="/js/**" />
-    <mvc:resources location="/plugins/" mapping="/plugins/**" />
+    <mvc:resources location="/css/" mapping="/css/**"/>
+    <mvc:resources location="/img/" mapping="/img/**"/>
+    <mvc:resources location="/js/" mapping="/js/**"/>
+    <mvc:resources location="/plugins/" mapping="/plugins/**"/>
 
     <!-- 开启对SpringMVC注解的支持 -->
-    <mvc:annotation-driven />
+    <mvc:annotation-driven/>
+
+    <!--扫描com.baidu.aop包下的注解类-->
+    <context:component-scan base-package="com.baidu.aop"/>
+    <!--支持切面注解-->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
 
 </beans>

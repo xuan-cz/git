@@ -2,8 +2,10 @@ package com.baidu.dao;
 
 import com.baidu.domain.Users;
 import org.apache.ibatis.annotations.*;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+
 
 public interface IUsersDao {
 
@@ -79,7 +81,7 @@ public interface IUsersDao {
                     @Result(column = "phoneNum", property = "phoneNum"),
                     @Result(column = "status", property = "status"),
                     @Result(column = "id", property = "roles", javaType = List.class,
-                            many = @Many(select = "com.baidu.dao.IRoleDao.findAll"))
+                            many = @Many(select = "com.baidu.dao.IRoleDao.findOtherAll"))
             })
     Users findUserByIdAndAllRole(String id)throws Exception;
 

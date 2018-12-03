@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
+
 public interface IProductDao {
 
     @Select("select * from product where id = #{id}")

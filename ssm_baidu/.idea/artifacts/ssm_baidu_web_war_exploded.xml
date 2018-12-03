@@ -7,6 +7,9 @@
           <element id="module-output" name="ssm_baidu_web" />
         </element>
         <element id="directory" name="lib">
+          <element id="archive" name="ssm_baidu_web-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="ssm_baidu_web" />
+          </element>
           <element id="archive" name="ssm_baidu_service-1.0-SNAPSHOT.jar">
             <element id="module-output" name="ssm_baidu_service" />
           </element>

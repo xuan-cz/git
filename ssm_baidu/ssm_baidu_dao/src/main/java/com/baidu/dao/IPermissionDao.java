@@ -20,17 +20,15 @@ public interface IPermissionDao {
     @Select("select * from permission")
     List<Permission> findAll()throws Exception;
 
+    @Select("select * from permission where id not in(select permissionId from Role_Permission where roleId = #{roleId})")
+    List<Permission> findOtherAll(String roleId)throws Exception;
+
     @Insert("insert into permission (permissionName,url) values(#{permissionName},#{url})")
     void save(Permission permission)throws Exception;
 
-    @Select("select * from permission where id = #{id}")
-    @Results({
-            @Result(id = true,column = "permissionName",property = "permissionName"),
-            @Result(column = "url",property = "url"),
-            @Result(column = "id",property = "roles",javaType = List.class,
-                many = @Many(select = "com.baidu.dao.IRoleDao.findBypermissionId"))
-    })
-    Permission findById(String id)throws Exception;
+
+    @Update("update permission set permissionName = #{permissionName},url = #{url} where id = #{id}")
+    void updateById(Permission permission)throws Exception;
 
 
     /**
@@ -48,4 +46,7 @@ public interface IPermissionDao {
      */
     @Delete("delete from permission where id = #{permissionId}")
     void deletePermission(String permissionId)throws Exception;
+
+    @Select("select * from permission where id = #{id}")
+    Permission findById(String id)throws Exception;
 }

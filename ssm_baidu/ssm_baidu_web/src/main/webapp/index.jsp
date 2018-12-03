@@ -3,7 +3,6 @@
 <html>
 <body>
 <h2>Hello World!</h2>
-<a href="/product/findAll.do">查看所有产品信息</a>
-<c:forward></c:forward>
+<jsp:forward page="/pages/main.jsp"></jsp:forward>
 </body>
 </html>

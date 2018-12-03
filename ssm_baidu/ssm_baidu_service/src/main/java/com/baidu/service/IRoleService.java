@@ -12,4 +12,7 @@ public interface IRoleService {
 
     void save(Role role)throws Exception;
 
+    Role findRoleByIdAndAllPermission(String id)throws Exception;
+
+    void addPermissionToRole(String roleId, String[] ids)throws Exception;
 }

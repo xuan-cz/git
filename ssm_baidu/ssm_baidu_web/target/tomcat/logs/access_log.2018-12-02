@@ -1,0 +1,17 @@
+0:0:0:0:0:0:0:1 - - [02/Dec/2018:21:20:25 +0800] "POST /login.do HTTP/1.1" 200 12128 http-bio-8888-exec-1 873
+0:0:0:0:0:0:0:1 - - [02/Dec/2018:21:20:27 +0800] "GET /user/findAll.do HTTP/1.1" 200 16353 http-bio-8888-exec-3 144
+0:0:0:0:0:0:0:1 - - [02/Dec/2018:21:20:29 +0800] "GET /permission/findAll.do HTTP/1.1" 200 21443 http-bio-8888-exec-4 39
+0:0:0:0:0:0:0:1 - - [02/Dec/2018:21:20:30 +0800] "GET /role/findAll.do HTTP/1.1" 200 16034 http-bio-8888-exec-5 44
+0:0:0:0:0:0:0:1 - - [02/Dec/2018:21:20:31 +0800] "GET /permission/findAll.do HTTP/1.1" 200 21443 http-bio-8888-exec-6 20
+0:0:0:0:0:0:0:1 - - [02/Dec/2018:21:20:34 +0800] "GET /sysLog/findAll.do HTTP/1.1" 200 16040 http-bio-8888-exec-7 921
+0:0:0:0:0:0:0:1 - - [02/Dec/2018:21:20:37 +0800] "GET /product/findAll.do HTTP/1.1" 200 28110 http-bio-8888-exec-8 36
+0:0:0:0:0:0:0:1 - - [02/Dec/2018:21:20:39 +0800] "GET /orders/findAll.do?page=1&pageSize=5 HTTP/1.1" 200 22945 http-bio-8888-exec-10 102
+0:0:0:0:0:0:0:1 - - [02/Dec/2018:21:20:41 +0800] "GET /logout.do HTTP/1.1" 302 - http-bio-8888-exec-10 2
+0:0:0:0:0:0:0:1 - - [02/Dec/2018:21:20:41 +0800] "GET /login.jsp HTTP/1.1" 200 2507 http-bio-8888-exec-10 14
+0:0:0:0:0:0:0:1 - - [02/Dec/2018:21:20:44 +0800] "POST /login.do HTTP/1.1" 200 12128 http-bio-8888-exec-10 93
+0:0:0:0:0:0:0:1 - - [02/Dec/2018:21:20:48 +0800] "GET /user/findAll.do HTTP/1.1" 403 11585 http-bio-8888-exec-10 115
+0:0:0:0:0:0:0:1 - - [02/Dec/2018:21:20:50 +0800] "GET /role/findAll.do HTTP/1.1" 403 11585 http-bio-8888-exec-10 11
+0:0:0:0:0:0:0:1 - - [02/Dec/2018:21:20:52 +0800] "GET /permission/findAll.do HTTP/1.1" 403 11585 http-bio-8888-exec-10 14
+0:0:0:0:0:0:0:1 - - [02/Dec/2018:21:20:54 +0800] "GET /sysLog/findAll.do HTTP/1.1" 200 16867 http-bio-8888-exec-10 14
+0:0:0:0:0:0:0:1 - - [02/Dec/2018:21:20:57 +0800] "GET /product/findAll.do HTTP/1.1" 200 28110 http-bio-8888-exec-10 22
+0:0:0:0:0:0:0:1 - - [02/Dec/2018:21:20:59 +0800] "GET /orders/findAll.do?page=1&pageSize=5 HTTP/1.1" 200 22945 http-bio-8888-exec-10 21
